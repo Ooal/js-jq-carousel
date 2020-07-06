@@ -48,4 +48,13 @@ $('.prev').click (prec);
 
 $(document).keydown(keyPrecSucc);
 
+$('.nav i').click(function() {
+
+
+  $('.nav i').removeClass('active');
+  $(this).addClass('active');
+  $('img').removeClass('active');
+  $($('img').get($(this).index())).addClass('active');
+});
+
 });
