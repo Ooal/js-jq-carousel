@@ -38,7 +38,12 @@ function keyPrecSucc(){
   }
 }
 
-
+function clickPallino() {
+  $('.nav i').removeClass('active');
+  $(this).addClass('active');
+  $('img').removeClass('active');
+  $($('img').get($(this).index())).addClass('active');
+}
 
 $(document).ready(function(){
 
@@ -48,13 +53,7 @@ $('.prev').click (prec);
 
 $(document).keydown(keyPrecSucc);
 
-$('.nav i').click(function() {
+$('.nav i').click (clickPallino);
 
-
-  $('.nav i').removeClass('active');
-  $(this).addClass('active');
-  $('img').removeClass('active');
-  $($('img').get($(this).index())).addClass('active');
-});
 
 });
